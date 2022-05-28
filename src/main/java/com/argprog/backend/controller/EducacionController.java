@@ -27,6 +27,11 @@ public class EducacionController {
      @Autowired
     private IEducacionService interEducacion;
     
+     @GetMapping ("/hello")
+     public String Hola(){
+         return "Hola! Servidor funcioando";
+     }
+     
      @PostMapping("/new/educacion")
     public void agregarEducacion (@RequestBody Educacion educ){
         //listaEducacion.add(educ);
