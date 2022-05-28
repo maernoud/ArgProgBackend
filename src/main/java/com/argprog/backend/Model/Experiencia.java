@@ -27,6 +27,7 @@ public class Experiencia {
     private String url;
     private String years;
     
+   public Experiencia(){}
    
     public Experiencia(Long id, String company, String position, String img, String url, String years){
         this.id=id;

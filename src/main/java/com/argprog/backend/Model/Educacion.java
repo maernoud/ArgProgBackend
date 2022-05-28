@@ -28,7 +28,10 @@ public class Educacion {
     private String url;
     private String years;
     
-     public Educacion(Long id, String school, String career, String img, String url, String years){
+     public Educacion(){}
+    
+    
+    public Educacion(Long id, String school, String career, String img, String url, String years){
         this.id=id;
         this.school=school;
         this.career=career;

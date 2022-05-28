@@ -4,10 +4,11 @@
  */
 package com.argprog.backend.service;
 
-import com.argprog.backend.Model.Educacion;
+
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.argprog.backend.Model.Educacion;
 import com.argprog.backend.repository.EducacionRepository;
 
 /**

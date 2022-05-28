@@ -33,6 +33,7 @@ public class About{
     private String ubication;
     private String about;
     
+    public About(){}
    
     public About(Long id, String nombre, String position, String img, String backimage, String ubication, String about){
         this.id=id;

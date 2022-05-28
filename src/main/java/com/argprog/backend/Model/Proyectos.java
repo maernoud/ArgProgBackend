@@ -30,7 +30,8 @@ public class Proyectos {
     private String url;
    
     
-   
+    public Proyectos(){}
+    
     public Proyectos(Long id, String title, String description, String img, String url){
         this.id=id;
         this.title=title;
