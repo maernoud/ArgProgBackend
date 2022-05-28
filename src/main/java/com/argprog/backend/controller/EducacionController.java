@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author maern
  */
 @RestController
-@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST, RequestMethod.DELETE, RequestMethod.PUT})
 public class EducacionController {
      @Autowired
     private IEducacionService interEducacion;
