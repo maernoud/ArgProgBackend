@@ -54,13 +54,11 @@ public class AboutController {
         return "La About fue eliminada correctamente";
     }
     
-    @PutMapping("/about/editar/{id}")
+    @PutMapping("/about/editar")
     public About editAbout(@PathVariable Long id,
-                               @RequestParam ("nombre") String nuevoNombre,
+                               
                                @RequestParam ("position") String nuevoPosition,
                                @RequestParam("img") String nuevoImg,
-                               @RequestParam("backimage") String nuevoBackimage,
-                               @RequestParam("ubication") String nuevoUbication,
                                @RequestParam("about") String nuevoAbout
                                ){
         //busco la persona en cuestión
@@ -68,11 +66,10 @@ public class AboutController {
         
         //esto tambien puede ir en service
         //para desacoplar mejor aun el codigo en un nuevo metodo
-       educ.setNombre(nuevoNombre);
+       
        educ.setPosition(nuevoPosition);
        educ.setImg(nuevoImg);
-       educ.setBackimage(nuevoBackimage);
-       educ.setUbication(nuevoUbication);
+      
        educ.setAbout(nuevoAbout);
         
         interAbout.saveAbout(educ);
