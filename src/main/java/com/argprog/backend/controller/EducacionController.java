@@ -60,6 +60,7 @@ public class EducacionController {
     
     @PutMapping("/educacion/editar/{id}")
     public Educacion editEducacion(@PathVariable Long id,
+                               @RequestParam ("id") String nuevoId,
                                @RequestParam ("shool") String nuevoSchool,
                                @RequestParam ("career") String nuevoCareer,
                                @RequestParam("img") String nuevoImg,
