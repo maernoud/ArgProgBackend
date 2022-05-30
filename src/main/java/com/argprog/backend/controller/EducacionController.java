@@ -57,13 +57,7 @@ public class EducacionController {
         //devuelve un string avisando si se elimino correctamente
         return "La Educacion fue eliminada correctamente";
     }
-    @PutMapping("/educacion/editar/{id}")
-    public Educacion editSinPar(@PathVariable Long id){
-        Educacion educ = interEducacion.findEducacion(id);
-        educ.setSchool("fuckyou");
-        interEducacion.saveEducacion(educ);
-        return educ;
-    }
+
     @PutMapping("/educacion/editar/{id}")
     public Educacion editEducacion(@PathVariable Long id, 
                                
