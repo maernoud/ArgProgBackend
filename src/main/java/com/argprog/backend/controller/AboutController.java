@@ -54,7 +54,7 @@ public class AboutController {
         return "La About fue eliminada correctamente";
     }
     
-    @PutMapping("/about/editar")
+    @PutMapping("/about/editar/{id}")
     public About editAbout(@PathVariable Long id,
                                
                                @RequestParam ("position") String nuevoPosition,
