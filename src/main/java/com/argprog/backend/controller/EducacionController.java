@@ -59,27 +59,28 @@ public class EducacionController {
     }
 
     @PutMapping("/educacion/editar/{id}")
-    public Educacion editEducacion(@PathVariable Long id, 
+    public Educacion editEducacion(@PathVariable Long id, @RequestBody Educacion newEduc
                                
-                               @RequestParam ("shool") String nuevoSchool,
-                               @RequestParam ("career") String nuevoCareer,
-                               @RequestParam("img") String nuevoImg,
-                               @RequestParam("url") String nuevoUrl,
-                               @RequestParam("years") String nuevoYears
+                               //@RequestParam ("shool") String nuevoSchool,
+                               //@RequestParam ("career") String nuevoCareer,
+                               //@RequestParam("img") String nuevoImg,
+                               //@RequestParam("url") String nuevoUrl,
+                               //@RequestParam("years") String nuevoYears
                                ){
         //busco la persona en cuestión
-        Educacion educ = interEducacion.findEducacion(id);
+       
+        //Educacion educ = interEducacion.findEducacion(id);
         
         //esto tambien puede ir en service
         //para desacoplar mejor aun el codigo en un nuevo metodo
-       educ.setSchool(nuevoSchool);
-       educ.setCareer(nuevoCareer);
-       educ.setImg(nuevoImg);
-       educ.setUrl(nuevoUrl);
-       educ.setYears(nuevoYears);
+       //educ.setSchool(newEduc.getSchool);
+       //educ.setCareer(nuevoCareer);
+       //educ.setImg(nuevoImg);
+       //educ.setUrl(nuevoUrl);
+       //educ.setYears(nuevoYears);
         
-        interEducacion.saveEducacion(educ);
+        interEducacion.saveEducacion(newEduc);
         
-        return educ;
+        return newEduc;
 }
 }
