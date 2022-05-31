@@ -58,29 +58,29 @@ public class EducacionController {
         return "La Educacion fue eliminada correctamente";
     }
 
-    @PutMapping("/educacion/editar")
-    public Educacion editEducacion( @RequestBody Educacion newEduc
-                               //@PathVariable Long id,
-                               //@RequestParam ("shool") String nuevoSchool,
-                               //@RequestParam ("career") String nuevoCareer,
-                               //@RequestParam("img") String nuevoImg,
-                               //@RequestParam("url") String nuevoUrl,
-                               //@RequestParam("years") String nuevoYears
+    @PutMapping("/educacion/editar/{id}")
+    public Educacion editEducacion(@PathVariable Long id, 
+                               //@RequestBody Educacion newEduc
+                               @RequestParam ("shool") String nuevoSchool,
+                               @RequestParam ("career") String nuevoCareer,
+                               @RequestParam("img") String nuevoImg,
+                               @RequestParam("url") String nuevoUrl,
+                               @RequestParam("years") String nuevoYears
                                ){
         //busco la persona en cuestión
        
-        //Educacion educ = interEducacion.findEducacion(id);
+        Educacion educ = interEducacion.findEducacion(id);
         
         //esto tambien puede ir en service
         //para desacoplar mejor aun el codigo en un nuevo metodo
-       //educ.setSchool(newEduc.getSchool);
-       //educ.setCareer(nuevoCareer);
-       //educ.setImg(nuevoImg);
-       //educ.setUrl(nuevoUrl);
-       //educ.setYears(nuevoYears);
+       educ.setSchool(nuevoSchool);
+       educ.setCareer(nuevoCareer);
+       educ.setImg(nuevoImg);
+       educ.setUrl(nuevoUrl);
+       educ.setYears(nuevoYears);
         
-        interEducacion.saveEducacion(newEduc);
+        interEducacion.saveEducacion(educ);
         
-        return newEduc;
+        return educ;
 }
 }
