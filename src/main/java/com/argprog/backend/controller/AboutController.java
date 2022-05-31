@@ -57,9 +57,9 @@ public class AboutController {
     @PutMapping("/about/editar/{id}")
     public About editAbout(@PathVariable Long id,
                                
-                               @RequestParam ("position") String nuevoPosition,
-                               @RequestParam("img") String nuevoImg,
-                               @RequestParam("about") String nuevoAbout
+                               @RequestParam (value ="position") String nuevoPosition,
+                               @RequestParam(value ="img") String nuevoImg,
+                               @RequestParam(value ="about") String nuevoAbout
                                ){
         //busco la persona en cuestión
         About educ = interAbout.findAbout(id);

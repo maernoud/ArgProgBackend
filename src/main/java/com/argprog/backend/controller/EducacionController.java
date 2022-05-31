@@ -61,11 +61,11 @@ public class EducacionController {
     @PutMapping("/educacion/editar/{id}")
     public Educacion editEducacion(@PathVariable Long id, 
                                //@RequestBody Educacion newEduc
-                               @RequestParam ("shool") String nuevoSchool,
-                               @RequestParam ("career") String nuevoCareer,
-                               @RequestParam("img") String nuevoImg,
-                               @RequestParam("url") String nuevoUrl,
-                               @RequestParam("years") String nuevoYears
+                               @RequestParam (value = "school") String nuevoSchool,
+                               @RequestParam (value = "career") String nuevoCareer,
+                               @RequestParam(value = "img") String nuevoImg,
+                               @RequestParam(value="url") String nuevoUrl,
+                               @RequestParam(value = "years") String nuevoYears
                                ){
         //busco la persona en cuestión
        

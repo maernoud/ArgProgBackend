@@ -53,13 +53,13 @@ public class ExperienciaController {
         return "La Experiencia fue eliminada correctamente";
     }
     
-    @PutMapping("/personas/editar/{id}")
+    @PutMapping("/experiencia/editar/{id}")
     public Experiencia editExperiencia(@PathVariable Long id,
-                               @RequestParam ("company") String nuevoCompany,
-                               @RequestParam ("position") String nuevoPosition,
-                               @RequestParam("img") String nuevoImg,
-                               @RequestParam("url") String nuevoUrl,
-                               @RequestParam("years") String nuevoYears
+                               @RequestParam (value ="company") String nuevoCompany,
+                               @RequestParam (value ="position") String nuevoPosition,
+                               @RequestParam(value ="img") String nuevoImg,
+                               @RequestParam(value ="url") String nuevoUrl,
+                               @RequestParam(value ="years") String nuevoYears
                                ){
         //busco la persona en cuestión
         Experiencia exper = interExperiencia.findExperiencia(id);

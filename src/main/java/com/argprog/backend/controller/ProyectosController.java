@@ -56,10 +56,10 @@ public class ProyectosController {
     
     @PutMapping("/proyectos/editar/{id}")
     public Proyectos editProyectos(@PathVariable Long id,
-                               @RequestParam ("title") String nuevoTitle,
-                               @RequestParam ("description") String nuevoDescription,
-                               @RequestParam("img") String nuevoImg,
-                               @RequestParam("url") String nuevoUrl
+                               @RequestParam (value ="title") String nuevoTitle,
+                               @RequestParam (value ="description") String nuevoDescription,
+                               @RequestParam(value ="img") String nuevoImg,
+                               @RequestParam(value ="url") String nuevoUrl
                                ){
         //busco la persona en cuestión
         Proyectos exper = interProyectos.findProyectos(id);
