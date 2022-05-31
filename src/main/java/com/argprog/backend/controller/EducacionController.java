@@ -58,9 +58,9 @@ public class EducacionController {
         return "La Educacion fue eliminada correctamente";
     }
 
-    @PutMapping("/educacion/editar/{id}")
-    public Educacion editEducacion(@PathVariable Long id, @RequestBody Educacion newEduc
-                               
+    @PutMapping("/educacion/editar")
+    public Educacion editEducacion( @RequestBody Educacion newEduc
+                               //@PathVariable Long id,
                                //@RequestParam ("shool") String nuevoSchool,
                                //@RequestParam ("career") String nuevoCareer,
                                //@RequestParam("img") String nuevoImg,
